@@ -5,7 +5,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 function Navbar() {
   return (
-    <div className="flex items-center justify-between md:px-10 pl-16 bg-current ">
+    <div className="flex items-center justify-between md:px-10 pl-16 absolute bg-black opacity-80 bg-cover text-white mb-1">
     <div className=' text-white'>
         <ul className='hidden md:flex gap-5 items-center'>
             <li>Mission</li>

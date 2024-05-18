@@ -4,8 +4,8 @@ import { IoMdArrowForward } from "react-icons/io";
 
 function Hero() {
   return (
-    <div className="bg-black text-white pl-16">
-        <div>
+    <div className="bg-[url('/hero.jpg')] text-white min-h-screen pt-20">
+        <div className="bg-black opacity-80 bg-cover text-white  pl-16 ">
                 <div className='text-white font-lato '>
                     <h1 className=' text-6xl font-semibold'>Love at  <br />first swipe</h1>
                     <p className='text-2xl'>With over two decades of reliable matchmaking <br /> experience,
