@@ -2,14 +2,15 @@
 import React from 'react'
 import Image from 'next/image';
 import { RiArrowDropDownLine } from "react-icons/ri";
+import Link from 'next/link';
 
 function Navbar() {
   return (
-    <div className=" absolute bg-black opacity-80  w-[83.9rem] text-white px-16">
+    <div className=" absolute bg-black opacity-80  w-[83.9rem] text-white px-16 ">
       <div className="flex items-center justify-between   ">
     <div className=' text-white'>
         <ul className='hidden md:flex gap-5 items-center'>
-            <li>Mission</li>
+            <Link href="/mission">Mission</Link>
             <li>Advice</li>
             <li>Help</li>
         </ul>

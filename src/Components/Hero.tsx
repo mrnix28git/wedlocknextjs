@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <div className="bg-[url('/hero.jpg')] text-white h-[45rem]  pt-[83.5px] ">
+    <div className="bg-[url('/hero.jpg')] text-white h-[48rem]  pt-[83.5px] ">
       <div className="bg-black opacity-80 bg-cover text-white h-full  pl-16 flex  pt-10 gap-80">
         <div className="  font-lato space-y-8">
           <div className="text-white space-y-8 ">
