@@ -10,3 +10,11 @@
 body{
   font-family: "Lato", sans-serif;
 }
+
+.bg-dark-blue {
+  background-color: #1a202c; /* Tailwind's gray-900 */
+}
+
+.bg-light-blue {
+  background-color: #3b82f6; /* Tailwind's blue-500 */
+}

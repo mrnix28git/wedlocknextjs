@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
@@ -25,13 +26,13 @@ const Footer = () => {
             <li>Mission</li>
             <li>Career</li>
             <li>Success Stories</li>
-            <li>Contact</li>
+            <Link href="/contact">Contact</Link>
           </ul>
         </div>
         <div>
           <ul>
             <li>Safe matrimonial tips</li>
-            <li>FAQs</li>
+            <Link href="/faqs">FAQs</Link>
             <li>Trust & safety</li>
           </ul>
         </div>
