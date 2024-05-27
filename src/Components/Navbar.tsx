@@ -1,32 +1,17 @@
 "use client";
-import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Image from 'next/image';
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Link from 'next/link';
 
 
 
-
-const Navbar: React.FC = () => {
-  const [pathname, setPathname] = useState<string | null>(null)
-  const router = useRouter()
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setPathname(router.pathname)
-    }
-  }, [router.pathname])
-
-  const isPagePath = pathname === "/mission" || 
-                     pathname === "/vision" || 
-                     pathname === "/team" || 
-                     pathname === "/contact"
+function Navbar() {
 
 
                      
   return (
-    <div className={`absolute   w-[83.9rem] text-white px-16 ${isPagePath ? "bg-blue-400" : " bg-black opacity-80"}`}>
+    <div className=" absolute bg-black opacity-80  w-[83.9rem] text-white px-16 ">
       <div className="flex items-center justify-between   ">
     <div className=' text-white'>
         <ul className='hidden md:flex gap-5 items-center'>

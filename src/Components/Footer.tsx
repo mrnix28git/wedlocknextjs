@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <div>
           <ul>
-            <li>Legal</li>
+            <Link href="/legal">Legal</Link>
             <li>Security</li>
             <li>Terms</li>
             <li>Privacy</li>
