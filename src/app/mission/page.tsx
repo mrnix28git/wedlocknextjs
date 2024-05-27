@@ -81,7 +81,7 @@ const Mission = () => {
           </div>
           <div className="bg-white  rounded-lg p-6 shadow-lg">
             <h2 className="text-2xl font-semibold mb-4">Keep it Simple</h2>
-            <p>We prioritize elegant solutions that align with our biggest goals – both as an organization and within teams. We say "no" to a lot so we can do the few things that matter most.</p>
+            <p>We prioritize elegant solutions that align with our biggest goals – both as an organization and within teams. We say {`"no"`} to a lot so we can do the few things that matter most.</p>
           </div>
           <div className="bg-white  rounded-lg p-6 shadow-lg">
             <h2 className="text-2xl font-semibold mb-4">Decide with Principles</h2>
