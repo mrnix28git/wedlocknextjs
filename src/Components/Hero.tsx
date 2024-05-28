@@ -17,7 +17,7 @@ function Hero() {
               supported by a committed Trust and <br /> Safety.
             </p>
           </div>
-          <div className=" backdrop-blur-md backdrop-brightness-125 rounded-2xl w-96 p-6 flex gap-5 text-white">
+          {/* <div className=" backdrop-blur-md backdrop-brightness-125 rounded-2xl w-96 p-6 flex gap-5 text-white">
             <div className="space-y-2 ">
               <h1>I am</h1>
               <div className=" group hover:bg-white  rounded-full w-40 h-12 flex items-center px-2">
@@ -76,7 +76,7 @@ function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="flex items-center justify-between bg-[#009BDA] rounded-full w-56 h-12 px-5 text-lg">
             <h1>Start free today </h1>
