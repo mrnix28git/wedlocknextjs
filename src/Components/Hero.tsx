@@ -1,12 +1,51 @@
+'use client'
 import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import Image from "next/image";
 
 function Hero() {
+
+  const imagePaths = [
+    "/img1.png",
+    "/img2.png",
+    "/img3.png",
+    "/img4.png",
+    "/img5.png",
+    "/img6.png",
+    "/img7.png",
+    "/img8.png",
+    "/img9.png",
+    "/img10.png",
+    "/img11.png",
+    "/img12.png",
+    "/img13.png",
+    "/img14.png",
+    "/img15.png",
+    "/img16.png",
+    "/img17.png",
+    "/img18.png",
+    "/img19.png",
+    "/img20.png",
+    "/img21.png",
+    "/img22.png",
+    "/img23.png",
+    "/img24.png"
+  ]
+
+
+
+
   return (
-    <div className="bg-[url('/hero.jpg')] text-white h-[48rem]  pt-[83.5px] ">
-      <div className="bg-black opacity-80 bg-cover text-white h-full  pl-16 flex  pt-10 gap-80">
-        <div className="  font-lato space-y-8">
+    <div className="relative   h-[48rem] overflow-hidden">
+      <div className="absolute inset-0 bg-black grid grid-cols-6 grid-rows-4 gap-1">
+        {imagePaths.map((path, index) => (
+          <div key={index} className="relative   w-full h-full ">
+            <Image src={path} layout="fill"   alt={`Image ${index + 1}`} />
+          </div>
+        ))}
+      </div>      
+      <div className="relative  bg-black bg-opacity-80 text-white h-full pl-16 flex pt-32 gap-80">
+                <div className="  font-lato space-y-8">
           <div className="text-white space-y-8 ">
             <h1 className=" text-6xl font-semibold">
               Love at <br />
