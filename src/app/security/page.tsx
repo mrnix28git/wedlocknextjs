@@ -1,14 +1,8 @@
 import LegalNav from "@/Components/LegalNav";
 import React from "react";
 
-interface LegalItem {
-  title: string;
-  content: string;
-}
-
-
 const page = () => {
-   const legal: LegalItem[] =[
+   const legal =[
     {
         title : 'Terms of Use:',
         content:  'By accessing and using our website, you agree to abide by our Terms of Use. These terms outline the rules and regulations governing your usage of our platform, including rights and responsibilities, limitations of liability, and dispute resolution mechanisms.'
@@ -44,7 +38,7 @@ const page = () => {
     <div className="pt-[83.5px] font-lato">
       <div className="bg-[#E6F2F7] text-center p-24 space-y-8">
         <h3 className="text-[#007EAF] font-semibold text-base">Current as of 20 Jan 2024</h3>
-        <h1 className="text-5xl font-semibold">Legal</h1>
+        <h1 className="text-5xl font-semibold">Security</h1>
         <p className="text-[#475467] text-xl">
           Your privacy is important to us at Untitled. We respect your privacy
           regarding any <br /> information we may collect from you across our website.

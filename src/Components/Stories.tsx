@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { IoArrowForward, IoArrowBack, } from "react-icons/io5";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 
 const Stories = () => {
   return (
@@ -17,10 +18,10 @@ const Stories = () => {
         </div>
         <p className=' md:text-2xl text-xl w-[50rem]'>Dive into stories of unexpected friendships, love that blossoms in the most extraordinary places, and dreams that come true against all odds.</p>
     </div>
-    <div className='flex gap-5' >
-        {/* <div className='relative'>
-            <img src={Story} alt="" className='rounded-3xl w-72' />
-            {/* <div className=' absolute bottom-0 '>
+    <div className='md:flex gap-5 space-y-5' >
+         {/* <div className='relative'>
+            <Image src="/story.svg" alt="sdfg" width={100} height={100} className='rounded-3xl w-72' />
+            <div className=' absolute bottom-0 '>
                 <h1>JACK & Celine</h1>
                 <p className='text-xs '>We matched. spoke for sometime and then met in real. We were sure we want to spend our life together after the initial few conversations.</p>
                 <div className='flex items-center gap-3 '>
@@ -28,7 +29,7 @@ const Stories = () => {
                     <MdOutlineArrowRightAlt  className='text-2xl'/>
                 </div>
             </div> 
-        </div> */}
+        </div>  */}
         <Image src="/story.svg" width={400} height={400} alt='story'/>
         <Image src="/story.svg" width={400} height={400} alt='story'/>
         <Image src="/story.svg" width={400} height={400} alt='story'/>

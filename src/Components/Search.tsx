@@ -11,9 +11,9 @@ const Search = () => {
             <h1 className=' md:text-6xl text-3xl font-bold text-[#007EAF]'>Browse matrimonial profiles by</h1>
            
         </div>
-        <p className=' md:text-2xl text-xl w-[50rem] text-[#101828E5]'>Your search for a great relationship has never been easier with groundbreaking overhaul of the eharmony you know and trust.</p>
+        <p className=' md:text-2xl text-xl md:w-[50rem] text-[#101828E5]'>Your search for a great relationship has never been easier with groundbreaking overhaul of the eharmony you know and trust.</p>
     </div>
-    <div className='flex gap-20' >
+    <div className='md:flex gap-20' >
         <div className='rounded-full hover:bg-[#009BDA] hover:text-white text-[#838E9E] p-2'>
             Mother Tongue
         </div>
@@ -27,7 +27,7 @@ const Search = () => {
             Nationality
         </div>
     </div>
-    <div className='grid grid-cols-6 gap-3'>
+    <div className='grid md:grid-cols-6 grid-cols-3 gap-3'>
         <div className='flex flex-col items-center gap-2'>
             <Image src="/p1.png" alt='p1' width={150} height={100} className='rounded-full'/>
             <h1>Bengali</h1>
