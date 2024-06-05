@@ -5,7 +5,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-function Navbar() {
+function Navbar() { 
   const pathname = usePathname();
   console.log('Current pathname:', pathname); // Debugging line
 
