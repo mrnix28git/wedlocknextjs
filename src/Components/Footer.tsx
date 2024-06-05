@@ -7,8 +7,8 @@ import { IoLogoTwitter } from "react-icons/io5";
 const Footer = () => {
   return (
     <div className=" p-16 bg-[#2A2A2A] text-white space-y-8">
-      <div className="flex gap-10">
-        <div className="w-2/4 space-y-5">
+      <div className="md:flex gap-10 space-y-8">
+        <div className="md:w-2/4 space-y-5">
           <div className="flex items-center">
             <Image src="/Logo.svg" alt="logo" width={300} height={100} />
             <h1 className="-rotate-90 relative top-4 right-2 text-xl">.au</h1>

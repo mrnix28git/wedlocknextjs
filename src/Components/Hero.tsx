@@ -1,10 +1,9 @@
-'use client'
+"use client";
 import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import Image from "next/image";
 
 function Hero() {
-
   const imagePaths = [
     "/img1.png",
     "/img2.png",
@@ -29,31 +28,27 @@ function Hero() {
     "/img21.png",
     "/img22.png",
     "/img23.png",
-    "/img24.png"
-  ]
-
-
-
+    "/img24.png",
+  ];
 
   return (
-    <div className="relative   h-[48rem] overflow-hidden">
+    <div className="relative   md:h-[48rem] overflow-hidden">
       <div className="absolute inset-0 bg-black grid grid-cols-6 grid-rows-4 gap-1">
         {imagePaths.map((path, index) => (
           <div key={index} className="relative   w-full h-full ">
-            <Image src={path} layout="fill"   alt={`Image ${index + 1}`} />
+            <Image src={path} layout="fill" alt={`Image ${index + 1}`} />
           </div>
         ))}
-      </div>      
-      <div className="relative  bg-black bg-opacity-80 text-white h-full pl-16 flex pt-32 gap-80">
-                <div className="  font-lato space-y-8">
-          <div className="text-white space-y-8 ">
-            <h1 className=" text-6xl font-semibold">
-              Love at <br />
-              first swipe
+      </div>
+      <div className="relative  bg-black  bg-opacity-80 text-white h-full md:pl-16 md:flex  md:pt-32 pt-16 px-10 gap-80">
+        <div className="  font-lato space-y-20">
+          <div className=" space-y-8 ">
+            <h1 className=" text-6xl font-semibold md:tracking-wider md:leading-relaxed w-72">
+              Love at first swipe
             </h1>
-            <p className="text-2xl">
-              With over two decades of reliable matchmaking <br /> experience,
-              supported by a committed Trust and <br /> Safety.
+            <p className="text-2xl md:tracking-wider w-[35rem]">
+              Australia{`'`}s most trusted Matrimony Website and Mobile
+              Application
             </p>
           </div>
           {/* <div className=" backdrop-blur-md backdrop-brightness-125 rounded-2xl w-96 p-6 flex gap-5 text-white">
@@ -123,11 +118,14 @@ function Hero() {
           </div>
         </div>
         <div>
-          <div className="flex items-end gap-12">
-            <div className="border-8 border-gray-700 rounded-3xl ">
+          <div
+            className="relative
+           md:-bottom-96 left-64 "
+          >
+            {/* <div className="border-8 border-gray-700 rounded-3xl ">
               <div className="bg-white  bg-opacity-30 backdrop-blur-3xl w-72 h-[30rem] rounded-2xl "></div>
-            </div>
-            <div>
+            </div> */}
+            <div className="">
               <Image src="/ver.svg" width={60} height={40} alt="logo" />
             </div>
           </div>

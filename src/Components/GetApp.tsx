@@ -5,17 +5,17 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 const GetApp = () => {
   return (
     <div className="bg-[#007EAF] text-white relative font-lato">
-      <div className="bg-[url('/appbg.svg')] h-full w-full flex justify-between p-16">
-        <div className="space-y-32">
-          <div className="space-y-10">
+      <div className="bg-[url('/appbg.svg')] h-full w-full md:flex justify-between md:p-16 p-10">
+        <div className="md:space-y-32 space-y-12">
+          <div className="md:space-y-10 space-y-5">
           <h1 className="text-6xl font-bold">Get the app!</h1>
-          <p className="text-2xl w-[40rem]">
+          <p className="text-2xl md:w-[40rem]">
             Lorem ipsum dolor sit amet consectetur. Dui mauris dictum ultrices
             rutrum nec arcu vel. Viverra egestas vitae aenean placerat faucibus
             pharetra .
           </p>
           </div>
-          <div className="md:space-x-5">
+          <div className="md:space-x-5 space-y-6">
             <button className="rounded-2xl bg-[#FFFFFF] border-2 border-[#0000004D] text-black text-lg p-2 cursor-pointer">
               <div className="flex items-center gap-7  ">
                 <FaApple className="text-5xl" />
@@ -37,7 +37,7 @@ const GetApp = () => {
           </div>
         </div>
         <div className="">
-          <Image src="/qr.svg" width={200} height={150} alt="logo" className="absolute right-72 top-48" />
+          <Image src="/qr.svg" width={200} height={150} alt="logo" className="absolute md:right-72 md:top-48 bottom-44 right-3" />
           <Image src="/ph.svg" width={300} height={200} alt="logo" />
         </div>
       </div>
