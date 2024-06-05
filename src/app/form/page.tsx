@@ -5,7 +5,7 @@ function page() {
   return (
     <div>
         <Page1/>
-        <Qualifi
+        <Qualification/>
     </div>
   )
 }
