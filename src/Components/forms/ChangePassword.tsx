@@ -2,7 +2,7 @@ import React from 'react'
 import Input from '../Input'
 import Image from 'next/image'
 
-const CreatePassword = () => {
+const ChangePassword = () => {
   return (
     <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] ">
          <div className="flex items-center justify-center mb-2 md:mb-10 w-[268px] h-[90px]">
@@ -17,7 +17,7 @@ const CreatePassword = () => {
         
         </div>
         <div className="flex flex-col items-center justify-center text-white mt-2">
-          <h1 className="text-3xl font-bold">Create Your Password</h1>
+          <h1 className="text-3xl font-bold">Forgot password</h1>
           <p className="mt-4 md:text-lg text-center">
           This blog post has been published. Team members <br /> will be able to edit this post and republish changes.
           </p>
@@ -39,4 +39,4 @@ const CreatePassword = () => {
   )
 }
 
-export default CreatePassword
+export default ChangePassword

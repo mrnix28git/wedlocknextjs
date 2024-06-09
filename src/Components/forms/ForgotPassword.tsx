@@ -1,24 +1,27 @@
-'use client'
 import React, { useState } from "react";
 import Input from "../Input";
 import Image from "next/image";
-const Registration = () => {
-  const [username, setUsername] = useState("");
 
-  return ( 
+const ForgotPassword = () => {
+  const [username, setUsername] = useState("");
+  return (
     <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] ">
       <div className="flex items-center justify-center mb-14 w-[268px] h-[90px]">
         <Image src="/logowhite.png" alt="Logo" />
       </div>
 
       <div className="flex flex-col items-center justify-center mt-8 mb-2">
-        <div className="bg-white flex items-center justify-center rounded-md w-12 h-12">
-          <Image src="/star.png" alt="Star" className="w-6 h-6" />
+        <div className="bg-white flex items-center justify-center rounded-full w-12 h-12">
+          <div className="bg-[#D1FADF] rounded-full w-9 h-9 flex items-center justify-center ">
+            <Image src="/confirm.png" alt="Star" className="w-[24px] h-[24px] " />
+          </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-white mt-4">
-          <h1 className="text-4xl font-bold">Create an account</h1>
-          <p className="mt-4 md:text-xl">Start your free 30-day trial. Cancel at any time.</p>
+        <div className="flex flex-col items-center justify-center text-center text-white mt-4">
+          <h1 className="text-4xl font-bold">Forgot password</h1>
+          <p className="mt-4  text-md ">
+          This blog post has been published. Team members <br /> will be able to edit this post and republish changes.
+          </p>
         </div>
       </div>
 
@@ -34,7 +37,7 @@ const Registration = () => {
             type="submit"
             className="w-full py-2 px-4 text-[#007EAF] rounded bg-[#ffffff]"
           >
-            Create an account
+            Send email
           </button>
         </form>
       </div>
@@ -42,4 +45,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default ForgotPassword;

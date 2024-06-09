@@ -1,15 +1,16 @@
 import React from "react";
 import Input from "../Input";
+import Image from "next/image";
 
 const Verification = () => {
   return (
     <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] ">
       <div className="flex items-center justify-center mb-14 w-[268px] h-[90px]">
-        <img src="/logowhite.png" alt="" />
+        <Image src="/logowhite.png" alt="" />
       </div>
       <div className="flex flex-col items-center justify-center mt-8 mb-2">
         <div className="bg-white flex items-center justify-center rounded-md w-12 h-12">
-          <img src="/lock.png" alt="Star" className="w-[16px] h-[18px]" />
+          <Image src="/lock.png" alt="Star" className="w-[16px] h-[18px]" />
         </div>
 
         <div className="flex flex-col items-center justify-center text-white mt-4">
@@ -52,7 +53,6 @@ const Verification = () => {
                 <button> Click to resend.</button>
 
             </div>
-            <div className="flex items-center justify-center mt-8"></div>
               <button className="bg-white text-[#007EAF] w-full h-12 rounded-xl">
                 Confirm
               </button>

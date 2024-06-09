@@ -14,6 +14,10 @@ import Details from "@/Components/Details";
 import Registration from "@/Components/forms/Registration";
 import Verification from "@/Components/forms/Verification";
 import CreatePassword from "@/Components/forms/CreatePassword";
+import Login from "@/Components/forms/Login";
+import ForgotPassword from "@/Components/forms/ForgotPassword";
+import ChangePassword from "@/Components/forms/ChangePassword";
+import MultiStepForm from "./questions/page"
 
 
 export default function Home() {
@@ -30,9 +34,14 @@ export default function Home() {
       <Ai/>
       <Search/>
       <Details/> */}
-      <Registration/>
+      {/* <Registration/> */}
       {/* <Verification/> */}
       {/* <CreatePassword/>  */}
+      {/* <Login/> */}
+      {/* <ForgotPassword/> */}
+      {/* <ChangePassword/> */}
+      <MultiStepForm />
+      
       
     </div> 
   );

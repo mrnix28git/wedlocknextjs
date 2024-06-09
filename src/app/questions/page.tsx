@@ -1,93 +1,319 @@
 "use client";
 import React, { useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+
 import { useRouter } from "next/router";
 import Image from "next/image";
 
 const questions = [
   {
     id: 1,
-    text: "For whom you are looking for?",
-    options: ["Child", "Myself", "Sibling", "Friend", "Relative"],
+    text: "I am a",
+    options: ["men", "women", "Non-binary"],
+    text2: "I am looking for a",
+    options1: ["Man", "Women", "Non-binary"],
+    type: "checkbox",
+    skip: false,
   },
   {
     id: 2,
-    text: "Have you tried looking for your life partner online before?",
-    options: ["I'm new to it", "Sometimes", "Prefer not to say"],
+    text: "Have you tried looking for your  life partner online before?",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: ["I am new to it", "Sometimes", "Prefer not to say"],
+    type: "checkbox",
+    skip: false,
   },
   {
     id: 3,
-    text: "How long you have been looking for?",
-    options: ["Just started", "It's been a while", "My friends or family were looking for me before"],
+    text: "What are your wedding goals?",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: [
+      "Serious to get married soon",
+      "Should understand each other first",
+      "Not sure, just browsing",
+    ],
+    type: "checkbox",
+    skip: false,
   },
   {
     id: 4,
-    text: "What are your wedding goals?",
-    options: ["Serious to get married soon", "Should understand each other first", "Not sure, just browsing"],
+    text: "How long have you been looking for?",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: [
+      "Just started",
+      "It's been a while",
+      "My friend or family were looking for me before",
+    ],
+    type: "checkbox",
+    skip: true,
   },
   {
     id: 5,
-    text: "I an age",
-    options: ["18","20","22","24"],
+    text: "For whom are you looking?",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: ["Child", "Myself", "Sibling", "Friend", "Relative"],
+    type: "checkbox",
+    skip: false,
   },
   {
     id: 6,
-    text: "I am looking for a partner of age",
-    options: ["18-24","25-36","37+"],
+    text: "I am age",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: ["18", "19", "20", "21", "22", "23"],
+    type: "Dropdown",
+    skip: false,
   },
   {
     id: 7,
-    text: "I am a",
-    options: ["Man","Women","Non-binary"],
+    text: "I am looking for a partner of age",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: ["18", "19", "20", "21", "22", "23"],
+    text2: "to",
+    options1: ["18", "19", "20", "21", "22", "23"],
+    type: "Dropdown",
+    skip: false,
   },
   {
     id: 8,
-    text: "I am looking for a partner of age",
-    options: ["Man","Women","Non-binary"],
+    text: "Are you looking for a partner living in Australia?",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: ["Yes", "No", "Doesn't matter"],
+    type: "checkbox",
+    skip: false,
+  },
+  {
+    id: 9,
+    text: "Do you believe in horoscope match?",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: ["It's must", "Doesn't matter", "Prefer not to say"],
+    type: "checkbox",
+    skip: false,
+  },
+  {
+    id: 10,
+    text: "Does religion and caste matter for your preferred partner?",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: ["It's must", "Doesn't matter", "Prefer not to say"],
+    type: "checkbox",
+    skip: false,
+  },
+  {
+    id: 11,
+    text: "What are your interests and hobbies?",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
+    options: [
+      "Sports",
+      "Photography",
+      "Dancing",
+      "Theater",
+      "Literature",
+      "Art",
+      "Music",
+      "Cooking",
+      "Cinema",
+      "History",
+      "Craft",
+      "Pottery",
+      "Carpentry",
+      "Collecting",
+      "None",
+    ], // this is should be multiple choice
+    type: "checkbox",
+    skip: true,
   },
 ];
 
 const MultiStepForm: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<string[]>([]);
-  const [selectedOption, setSelectedOption] = useState<string>("");
-  //   const router = useRouter();
+  const [answers, setAnswers] = useState<any[]>([]);
+  const [selectedOption, setSelectedOption] = useState<any>({});
+  // const router = useRouter();
 
-  const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedOption(e.target.value);
+  const handleOptionChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value, type } = e.target;
+    if (type === "checkbox") {
+      const checked = (e.target as HTMLInputElement).checked;
+      setSelectedOption((prev: any) => ({
+        ...prev,
+        [name]: checked ? value : "",
+      }));
+    } else {
+      setSelectedOption((prev: any) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (selectedOption) {
-      const updatedAnswers = [...answers, selectedOption];
-      setAnswers(updatedAnswers);
-      setSelectedOption("");
-
-      if (currentQuestion < questions.length - 1) {
-        setCurrentQuestion(currentQuestion + 1);
-      } else {
-        console.log("Form completed", updatedAnswers);
-      }
+    const updatedAnswers = [...answers, selectedOption];
+    setAnswers(updatedAnswers);
+    setSelectedOption({});
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      console.log("Form completed", updatedAnswers);
     }
   };
+
   const handleSkip = (e: React.FormEvent) => {
     e.preventDefault();
     if (currentQuestion < questions.length - 1) {
-        setCurrentQuestion(currentQuestion + 1);
-      } 
+      setCurrentQuestion(currentQuestion + 1);
+    }
+  };
+
+  const renderOptions = (question: any) => {
+    if (question.type === "checkbox") {
+      return (
+        <>
+          <div
+            className={`grid ${
+              question.options && question.options1
+                ? " grid-cols-1 md:grid-cols-3 gap-3 pl-4 pr-4"
+                : "w-[30%] grid-cols-1 gap-2"
+            } ${
+              question.options && question.options.length > 5
+              ? "grid-cols-1 md:grid-cols-5 gap-4 pl-4 pr-4"
+              : "mt-4 grid-cols-1 gap-2"
+            } mb-2 mt-4`}
+          >
+            {question.options.map((option: string, index: number) => (
+              <div
+                className="flex   items-center justify-between rounded-xl h-10 px-5 text-white bg-[#FFFFFF80] "
+                key={index}
+              >
+                <label
+                  htmlFor={`option-${index}`}
+                  className="ml-3 block font-medium"
+                >
+                  {option}
+                </label>
+                <input
+                  id={`option-${index}`}
+                  name={`question-${currentQuestion}`}
+                  type="checkbox"
+                  value={option}
+                  checked={
+                    selectedOption[`question-${currentQuestion}`] === option
+                  }
+                  onChange={handleOptionChange}
+                  className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                />
+              </div>
+            ))}
+          </div>
+          {question.options1 && (
+            <>
+              <h2 className="mt-4  text-center font-bold text-2xl ">
+                {question.text2}
+              </h2>
+              <div
+                className={`grid ${
+                  question.options1.length > 2
+                    ? "grid-cols-1 md:grid-cols-3 gap-4 pl-4 pr-4"
+                    : "grid-cols-1"
+                } mb-4`}
+              >
+                {question.options1.map((option: string, index: number) => (
+                  <div
+                    className="flex flex-row items-center justify-between rounded-xl h-10 px-5 text-white bg-[#FFFFFF80]"
+                    key={index}
+                  >
+                    <label
+                      htmlFor={`option1-${index}`}
+                      className="ml-3 block font-medium"
+                    >
+                      {option}
+                    </label>
+                    <input
+                      id={`option1-${index}`}
+                      name={`question-${currentQuestion}-1`}
+                      type="checkbox"
+                      value={option}
+                      checked={
+                        selectedOption[`question-${currentQuestion}-1`] ===
+                        option
+                      }
+                      onChange={handleOptionChange}
+                      className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                    />
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </>
+      );
+    } else if (question.type === "Dropdown") {
+      return (
+        <>
+        <div className=" flex items-center justify-center mt-10 w-[40%] ">
+          {question.options && (
+            <select
+              name={`question-${currentQuestion}-1`}
+              value={selectedOption[`question-${currentQuestion}-1`] || ""}
+              onChange={handleOptionChange}
+              className="w-full h-10 px-5 text-white  bg-[#7DB9D1]
+              ]
+              rounded-md"
+            >
+              <option value="">Select an option</option>
+              {question.options.map((option: string, index: number) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          )}
+          {question.options1 && (
+            <>
+              <span className="ml-2 mr-2">{question.text2}</span>
+              <select
+                name={`question-${currentQuestion}-2`}
+                value={selectedOption[`question-${currentQuestion}-2`] || ""}
+                onChange={handleOptionChange}
+                className="w-full h-10 px-5 text-white bg-[#7DB9D1] rounded-md mt-2"
+              >
+                <option value="">Select an option</option>
+                {question.options1.map((option: string, index: number) => (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
+          </div>
+        </>
+      );
+    }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#007EAF] text-white  pt-[83.5px]">
-      <div className="w-full max-w-md p-8 space-y-6 ">
-        <div className="text-center">
-          <Image
-            src="/Logo.svg"
+    <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] text-white ">
+        <Image
+            src="/logowhite.png"
             width={400}
             height={500}
             alt="Wedlock Logo"
-            className="w-72 h-24 mx-auto mb-4"
+            className="w-72 h-24 mx-auto  mb-2 "
           />
+          
+        <div className=" w-[50vw] mt-10 text-center pl-4 pr-4">
           <h2 className="text-2xl font-bold">
             Question {currentQuestion + 1}/{questions.length}
           </h2>
@@ -99,49 +325,39 @@ const MultiStepForm: React.FC = () => {
               }}
             ></div>
           </div>
-          <p className="my-4 text-5xl font-semibold">{questions[currentQuestion].text}</p>
-          <p className="text-[#FFFFFF90]">Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
+          <p className="my-4 text-4xl font-semibold">
+            {questions[currentQuestion].text ||
+              questions[currentQuestion].text2}
+          </p>
+          <p className="text-[#FFFFFF90]">
+            {questions[currentQuestion].summary}
+          </p>
         </div>
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          {questions[currentQuestion].options.map((option, index) => (
-            <div
-              className="flex items-center justify-between rounded-xl h-10 px-5 text-white bg-[#FFFFFF80]  "
-              key={index}
-            >
-              <label
-                htmlFor={`option-${index}`}
-                className="ml-3 block  font-medium "
+      <div className="w-full  space-y-6 ">
+    
+        <form className="flex  flex-col items-center justify-center gap-2   space-y-4" onSubmit={handleSubmit}>
+          {renderOptions(questions[currentQuestion])}
+          <div className="flex gap-4  justify-between mt-6 relative left-[40%] ">
+            {questions[currentQuestion].skip && (
+              <button
+                type="button"
+                className="px-4 mt-20 py-2 text-white bg-[#007EAF] border  rounded-md"
+                onClick={handleSkip}
               >
-                {option}
-              </label>
-              <input
-                id={`option-${index}`}
-                name="option"
-                type="checkbox"
-                value={option}
-                checked={selectedOption === option}
-                onChange={handleOptionChange}
-                className="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
-              />
-            </div>
-          ))}
-          <div className="flex justify-between mt-6  relative left-96">
-            <button
-              type="button"
-              className=""
-              onClick={handleSkip}
-            >
-              Skip the questions
-            </button>
+                Skip the question
+              </button>
+            )}
             <button
               type="submit"
-              className="px-4 py-2 text-[#007EAF] bg-white rounded-md"
+              className=" px-4 mt-20 py-2 text-[#007EAF] bg-white rounded-md flex items-center gap-2"
             >
-              Continue --{">"}
+              Continue <FaArrowRightLong />
+
             </button>
           </div>
         </form>
       </div>
+    
     </div>
   );
 };
