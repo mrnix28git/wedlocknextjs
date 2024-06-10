@@ -1,17 +1,17 @@
 'use client'
 import React from "react";
-import Input from "../Input";
+import Input from "../../Components/Input";
 import Image from "next/image";
 
 const Login = () => {
   return (
     <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] ">
-      <div className="flex items-center justify-center mb-2 md:mb-10 w-[268px] h-[90px]">
-        <Image src="/logowhite.png" alt="" />
+      <div className="flex items-center justify-center mb-2 md:mb-10 ">
+        <Image src="/logowhite.png" alt="" width={268} height={90} />
       </div>
       <div className="flex flex-col items-center justify-center mt-4 ">
         <div className="bg-white flex items-center justify-center rounded-md w-12 h-12">
-          <Image src="/login.png" alt="login" className="w-[20px] h-[20px]" />
+          <Image src="/login.png" alt="login" width={20} height={20} />
         </div>
       </div>
 
@@ -43,7 +43,7 @@ const Login = () => {
               </button>
 
             </form>
-            <button className=" bg-transparent border  text-[#ffffff] mt-2 w-full h-12 rounded-md">
+              <button className=" bg-transparent border  text-[#ffffff] mt-2 w-full h-12 rounded-md"onClick={() => window.location.href = '/register'} >
                 Create an account
               </button>
 

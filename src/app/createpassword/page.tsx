@@ -1,17 +1,17 @@
 import React from 'react'
-import Input from '../Input'
+import Input from '../../Components/Input'
 import Image from 'next/image'
 
 const CreatePassword = () => {
   return (
     <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] ">
-         <div className="flex items-center justify-center mb-2 md:mb-10 w-[268px] h-[90px]">
-        <Image src="/logowhite.png" alt="" />
+         <div className="flex items-center justify-center mb-2 md:mb-10 ">
+        <Image src="/logowhite.png" alt="" width={268} height={90} />
       </div>
       <div className="flex flex-col items-center justify-center mt-4 ">
         <div className="bg-white flex items-center justify-center rounded-full w-12 h-12">
             <div className="bg-[#D1FADF] rounded-full w-9 h-9 flex items-center justify-center " >
-            <Image src="/confirm.png" alt="Star" className="w-[24px] h-[24px] "/>
+            <Image src="/confirm.png" alt="Star"  width={24} height={24}/>
 
             </div>
         

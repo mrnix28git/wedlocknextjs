@@ -1,16 +1,27 @@
+"use client";
+
 import React from "react";
-import Input from "../Input";
+import Input from "../../Components/Input";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Verification = () => {
+const router = useRouter();
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+ 
+    router.push("/createpassword");
+  };
+
   return (
     <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] ">
-      <div className="flex items-center justify-center mb-14 w-[268px] h-[90px]">
-        <Image src="/logowhite.png" alt="" />
+      <div className="flex items-center justify-center mb-14 " >
+        <Image src="/logowhite.png" alt="" width={268} height={90} />
       </div>
       <div className="flex flex-col items-center justify-center mt-8 mb-2">
-        <div className="bg-white flex items-center justify-center rounded-md w-12 h-12">
-          <Image src="/lock.png" alt="Star" className="w-[16px] h-[18px]" />
+        <div className="bg-white flex items-center justify-center rounded-md w-12 h-12  ">
+          <Image src="/lock.png" alt="Star" width={16} height={18} />
         </div>
 
         <div className="flex flex-col items-center justify-center text-white mt-4">
@@ -21,7 +32,7 @@ const Verification = () => {
           </p>
         </div>
         <div className="flex items-center justify-center mt-8">
-          <form action=" ">
+          <form action=" " onSubmit={handleSubmit}>
             <div className="flex  gap-4">
               <Input
                 className="w-16 h-16 text-center rounded-xl text-3xl text-[#007EAF] placeholder-[#007EAF] outline-gray-400"
@@ -49,11 +60,11 @@ const Verification = () => {
               />
             </div>
             <div className="flex items-center justify-center mt-8 text-[#F9F5FF] gap-1 text-lg">
-                <p>Didn't receive code? </p>
+                <p>Did you not receive code? </p>
                 <button> Click to resend.</button>
 
             </div>
-              <button className="bg-white text-[#007EAF] w-full h-12 rounded-xl">
+              <button className="bg-white text-[#007EAF] w-full h-12 rounded-xl" >
                 Confirm
               </button>
 

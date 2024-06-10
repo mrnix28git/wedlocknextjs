@@ -2,6 +2,7 @@
 import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import Image from "next/image";
+import Link from "next/link";
 
 function Hero() {
   const imagePaths = [
@@ -29,16 +30,22 @@ function Hero() {
     "/img22.png",
     "/img23.png",
     "/img24.png",
+    "/img25.png",
+    
+    
+
   ];
 
   return (
     <div className="relative   md:h-[48rem] overflow-hidden">
-      <div className="absolute inset-0 bg-black grid grid-cols-6 grid-rows-4 gap-1">
+      <div className="absolute  inset-0 bg-black  " >
+        <div className="grid grid-cols-5 grid-rows-5 gap-1  rotate-12  h-full scale-[1.35]">
         {imagePaths.map((path, index) => (
-          <div key={index} className="relative   w-full h-full ">
+          <div key={index} className="relative  h-full w-full ">
             <Image src={path} layout="fill" alt={`Image ${index + 1}`} />
           </div>
         ))}
+        </div>
       </div>
       <div className="relative  bg-black  bg-opacity-80 text-white h-full md:pl-16 md:flex  md:pt-32 pt-16 px-10 gap-80">
         <div className="  font-lato space-y-20">
@@ -112,10 +119,13 @@ function Hero() {
             </div>
           </div> */}
 
-          <div className="flex items-center justify-between bg-[#009BDA] rounded-full w-56 h-12 px-5 text-lg">
-            <h1>Start free today </h1>
-            <IoMdArrowForward />
-          </div>
+          <Link href={"/questions"}  className="flex items-center justify-between bg-[#009BDA] rounded-full w-56 h-12 px-5 text-lg" >
+            <div className="flex items-center gap-2">
+              <span>  Start free today </span>
+             <IoMdArrowForward /> 
+            </div>
+            
+          </Link>
         </div>
         <div>
           <div

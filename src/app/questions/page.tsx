@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useRouter } from 'next/navigation';
 
-import { useRouter } from "next/router";
 import Image from "next/image";
 
 const questions = [
@@ -134,6 +134,8 @@ const questions = [
 ];
 
 const MultiStepForm: React.FC = () => {
+  const router = useRouter();
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<any[]>([]);
   const [selectedOption, setSelectedOption] = useState<any>({});
@@ -166,6 +168,9 @@ const MultiStepForm: React.FC = () => {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       console.log("Form completed", updatedAnswers);
+      router.push("/register");
+      
+      
     }
   };
 
@@ -187,7 +192,7 @@ const MultiStepForm: React.FC = () => {
                 : "w-[30%] grid-cols-1 gap-2"
             } ${
               question.options && question.options.length > 5
-              ? "grid-cols-1 md:grid-cols-5 gap-4 pl-4 pr-4"
+              ? "grid-cols-1 w-[70%] md:grid-cols-5 gap-4 pl-4 pr-4"
               : "mt-4 grid-cols-1 gap-2"
             } mb-2 mt-4`}
           >

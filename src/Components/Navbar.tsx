@@ -13,6 +13,16 @@ function Navbar() {
   const isBlueBgRoute = pathname === "/mission" || pathname === "/advice" || pathname === "/help" || pathname === "/legal" || pathname === "";
   console.log('isBlueBgRoute:', isBlueBgRoute); // Debugging line
 
+  // Determine if the navbar should be hidden
+  const hiddenRoutes = ["/verification", "/register", "/questions", "/login", "/forgotpassword", "/createpassword"];
+  const isHiddenRoute = hiddenRoutes.includes(pathname);
+  console.log('isHiddenRoute:', isHiddenRoute); // Debugging line
+
+  // If the navbar should be hidden, return null
+  if (isHiddenRoute) {
+    return null;
+  }
+
   return (
     <div className={`absolute z-10 opacity-80 w-full text-white md:px-16 px-3 ${isBlueBgRoute ? 'bg-[#007eb0]' : ''}`}>
       <div className="flex items-center justify-between">

@@ -1,19 +1,27 @@
 'use client'
 import React, { useState } from "react";
-import Input from "../Input";
+import Input from "../../Components/Input";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 const Registration = () => {
+  const router = useRouter();
   const [username, setUsername] = useState("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push("/verification");
+    
+  };
 
   return ( 
     <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] ">
-      <div className="flex items-center justify-center mb-14 w-[268px] h-[90px]">
-        <Image src="/logowhite.png" alt="Logo" />
+      <div className="flex items-center justify-center mb-14">
+        <Image src="/logowhite.png" alt="Logo"   width={238} height={90}/>
       </div>
 
       <div className="flex flex-col items-center justify-center mt-8 mb-2">
-        <div className="bg-white flex items-center justify-center rounded-md w-12 h-12">
-          <Image src="/star.png" alt="Star" className="w-6 h-6" />
+        <div className="bg-white flex items-center justify-center rounded-md">
+          <Image src="/star.png" alt="Star" width={24} height={24} />
         </div>
 
         <div className="flex flex-col items-center justify-center text-white mt-4">
@@ -22,8 +30,12 @@ const Registration = () => {
         </div>
       </div>
 
+      
+
+
+
       <div className="w-full max-w-md px-2  py-4">
-        <form action="" className="space-y-6">
+        <form action="" className="space-y-6" onSubmit={handleSubmit}>
           <Input
             label="Email"
             value={username}
