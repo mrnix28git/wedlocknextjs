@@ -20,7 +20,7 @@ const Registration = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-8 mb-2">
-        <div className="bg-white flex items-center justify-center rounded-md">
+        <div className="bg-white flex items-center justify-center rounded-md w-10 h-10 ">
           <Image src="/star.png" alt="Star" width={24} height={24} />
         </div>
 

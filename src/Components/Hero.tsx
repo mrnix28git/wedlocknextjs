@@ -31,18 +31,18 @@ function Hero() {
     "/img23.png",
     "/img24.png",
     "/img25.png",
-    
-    
-
+    "/img11.png",
+    "/img12.png",
+    "/img13.png",
   ];
 
   return (
-    <div className="relative   md:h-[48rem] overflow-hidden">
-      <div className="absolute  inset-0 bg-black  " >
-        <div className="grid grid-cols-5 grid-rows-5 gap-1  rotate-12  h-full scale-[1.35]">
+    <div className="relative md:h-[48rem] overflow-hidden">
+      <div className="absolute  inset-1 bg-black   " >
+        <div className="grid grid-cols-6 grid-rows-5 gap-3 rotate-12  h-full scale-[1.39]  ">
         {imagePaths.map((path, index) => (
-          <div key={index} className="relative  h-full w-full ">
-            <Image src={path} layout="fill" alt={`Image ${index + 1}`} />
+          <div key={index} className="relative  h-full w-full  ">
+            <Image src={path} layout="fill" alt={`Image ${index + 1}`}  />
           </div>
         ))}
         </div>
@@ -51,7 +51,7 @@ function Hero() {
         <div className="  font-lato space-y-20">
           <div className=" space-y-8 ">
             <h1 className=" text-6xl font-semibold md:tracking-wider md:leading-relaxed w-72">
-              Love at first swipe
+              Love At First Swipe
             </h1>
             <p className="text-2xl md:tracking-wider w-[35rem]">
               Australia{`'`}s most trusted Matrimony Website and Mobile

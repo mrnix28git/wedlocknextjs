@@ -1,24 +1,22 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { RiArrowDropDownLine } from "react-icons/ri";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Login from './model/Login';
 
-function Navbar() { 
+const Navbar: React.FC = () => {
   const pathname = usePathname();
-  console.log('Current pathname:', pathname); // Debugging line
+  const [isLoginOpen, setLoginOpen] = useState(false);
 
-  // Determine if the current path should have the bg-blue class
+  const openLogin = () => setLoginOpen(true);
+  const closeLogin = () => setLoginOpen(false);
+
   const isBlueBgRoute = pathname === "/mission" || pathname === "/advice" || pathname === "/help" || pathname === "/legal" || pathname === "";
-  console.log('isBlueBgRoute:', isBlueBgRoute); // Debugging line
-
-  // Determine if the navbar should be hidden
   const hiddenRoutes = ["/verification", "/register", "/questions", "/login", "/forgotpassword", "/createpassword"];
   const isHiddenRoute = hiddenRoutes.includes(pathname);
-  console.log('isHiddenRoute:', isHiddenRoute); // Debugging line
 
-  // If the navbar should be hidden, return null
   if (isHiddenRoute) {
     return null;
   }
@@ -37,13 +35,14 @@ function Navbar() {
           <Image src="/Logo.svg" width={250} height={150} alt='logo' />
         </div>
         <div className='flex gap-5 items-start'>
-          <button className='flex items-center justify-center md:gap-3 text-white md:rounded-full rounded-3xl border-white border-2 md:w-32 w-20 md:h-16 md:text-xl px-3'>
+          <button className='flex items-center justify-center md:gap-3 text-white md:rounded-full rounded-3xl border-white border-2 md:w-32 w-20 md:h-16 md:text-xl px-3' onClick={openLogin}>
             Login
             <RiArrowDropDownLine className="text-5xl" />
           </button>
           <Image src="/Aus.svg" width={40} height={50} alt='lang' />
         </div>
       </div>
+      <Login isOpen={isLoginOpen} onClose={closeLogin}  />
     </div>
   );
 }
