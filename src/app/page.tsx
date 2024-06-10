@@ -12,6 +12,7 @@ import Navbar from "@/Components/Navbar";
 import Search from "@/Components/Search";
 
 import Details from "@/Components/Details";
+import Pre from "@/Components/Pre";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Matching />
       <YouTube />
       <Stories />
+      <Pre/>
       <Feature />
       <Ai />
       <Search />

@@ -47,7 +47,7 @@ function Hero() {
         ))}
         </div>
       </div>
-      <div className="relative  bg-black  bg-opacity-80 text-white h-full md:pl-16 md:flex  md:pt-32 pt-16 px-10 gap-80">
+      <div className="relative bg-black  bg-opacity-60  text-white h-full md:pl-16 md:flex  md:pt-32 pt-16 px-10 gap-80">
         <div className="  font-lato space-y-20">
           <div className=" space-y-8 ">
             <h1 className=" text-6xl font-semibold md:tracking-wider md:leading-relaxed w-72">

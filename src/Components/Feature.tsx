@@ -3,7 +3,13 @@ import React from 'react'
 
 const Feature = () => {
   return (
-    <div><div className='bg-[#007EAF] flex flex-col md:flex-row gap-8 text-white md:p-20 p-8  '>
+    <div className='relative'>
+       <img
+        src="/curvewhite.svg"
+        alt="arw"
+        className="absolute  w-[35rem] left-10 top-0 -rotate-[125deg]"
+      />
+      <div className='bg-[#007EAF] flex flex-col md:flex-row gap-8 text-white md:p-20 p-8  '>
     <div className='space-y-12'>
       
         <h1 className='text-5xl font-bold'>Connect with matches the way you like
