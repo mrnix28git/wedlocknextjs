@@ -3,8 +3,13 @@ import React from 'react'
 
 const YouTube = () => {
   return (
-    <div>
-    <div className='bg-white  md:px-20 md:py-20 md:space-y-14 p-8 space-y-8'>
+    <div className='relative' >
+       <img
+        src="/curvesm.svg"
+        alt="arw"
+        className="absolute  w-[35rem] -right-20 top-10"
+      />
+    <div className='bg-[#E6F2F7]  md:px-20 md:py-20 md:space-y-14 p-8 space-y-8'>
        
         <h1 className='md:text-7xl text-3xl font-bold text-[#007EAF]'>Introducing: A new eharmony experience
         </h1>

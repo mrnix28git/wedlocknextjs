@@ -5,7 +5,8 @@ import { MdOutlineArrowRightAlt } from "react-icons/md";
 
 const Stories = () => {
   return (
-    <div>  <div className='md:space-y-16 md:px-20 md:py-20 space-y-5 p-8 bg-[#007EAF] text-white'>
+    <div>  <div className='md:space-y-16 md:px-20 md:py-20 space-y-5 p-8 bg-[#007EAF] text-white relative'>
+         <img src="/curvewhite.svg" alt='arw' className='absolute  w-[35rem] -right-5 -top-20'/>
   
     <div className='md:space-y-10 space-y-5'>
         <div className='flex items-center  justify-between pr-20'>
@@ -33,6 +34,9 @@ const Stories = () => {
         <Image src="/story.svg" width={400} height={400} alt='story'/>
         <Image src="/story.svg" width={400} height={400} alt='story'/>
         <Image src="/story.svg" width={400} height={400} alt='story'/>
+    </div>
+    <div>
+        
     </div>
 </div>
 </div>

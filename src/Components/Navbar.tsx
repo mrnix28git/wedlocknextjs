@@ -25,6 +25,10 @@ function Navbar() {
 
   return (
     <div className={`absolute z-10 opacity-80 w-full text-white md:px-16 px-3 ${isBlueBgRoute ? 'bg-[#007eb0]' : ''}`}>
+      
+      {/* <div className='h-20 bg-black blur-2xl '>
+
+</div> */}
       <div className="flex items-center justify-between">
         <div className='text-white'>
           <ul className='hidden md:flex gap-5 items-center'>

@@ -38,8 +38,8 @@ function Hero() {
 
   return (
     <div className="relative   md:h-[48rem] overflow-hidden">
-      <div className="absolute  inset-0 bg-black  " >
-        <div className="grid grid-cols-5 grid-rows-5 gap-1  rotate-12  h-full scale-[1.35]">
+      <div className="absolute  inset-0   " >
+        <div className="grid grid-cols-5 grid-rows-5 gap-1  rotate-12 bg-black h-full scale-[1.35]">
         {imagePaths.map((path, index) => (
           <div key={index} className="relative  h-full w-full ">
             <Image src={path} layout="fill" alt={`Image ${index + 1}`} />
@@ -47,10 +47,10 @@ function Hero() {
         ))}
         </div>
       </div>
-      <div className="relative  bg-black  bg-opacity-80 text-white h-full md:pl-16 md:flex  md:pt-32 pt-16 px-10 gap-80">
+      <div className="relative bg-black  bg-opacity-60  text-white h-full md:pl-16 md:flex  md:pt-32 pt-16 px-10 gap-80">
         <div className="  font-lato space-y-20">
           <div className=" space-y-8 ">
-            <h1 className=" text-6xl font-semibold md:tracking-wider md:leading-relaxed w-72">
+            <h1 className=" text-9xl font-bold w-[40rem]">
               Love at first swipe
             </h1>
             <p className="text-2xl md:tracking-wider w-[35rem]">
