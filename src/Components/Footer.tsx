@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="md:w-2/4 space-y-5">
           <div className="flex items-center">
             <Image src="/Logo.svg" alt="logo" width={300} height={100} />
-            <h1 className="-rotate-90 relative top-4 right-2 text-xl">.au</h1>
+            <h1 className="-rotate-90 relative top-4 right-2 text-lg text-center xl:text-xl">.au</h1>
           </div>
           <p>
             In the spirit of reconciliation, Wedlock acknowledges the
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="rounded-full bg-[#FFFFFF80] h-1 "></div>
-      <div className="flex items-end justify-between">
+      <div className="flex flex-col md:flex-row items-end justify-between">
         <div>
           <h1 className="font-semibold">
             <i>Love at first swipe</i>
@@ -87,7 +87,7 @@ const Footer = () => {
             dating website.
           </p>
         </div>
-        <h1 className="">© 2024 Wedlock Australia. All rights reserved.</h1>
+        <h1 className="mt-2 text-balance">© 2024 Wedlock Australia. All rights reserved.</h1>
         <div className="text-white rounded-full bg-[#007EAF] w-10 h-10 flex items-center justify-center text-2xl">
           ^
         </div>

@@ -22,12 +22,10 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <div className={`absolute z-10 opacity-80 w-full text-white md:px-16 px-3 ${isBlueBgRoute ? 'bg-[#007eb0]' : ''}`}>
+    <div className={`absolute z-10   w-full text-white   ${isBlueBgRoute ? 'bg-[#007eb0]' : ''}`}>
       
-      {/* <div className='h-20 bg-black blur-2xl '>
-
-</div> */}
-      <div className="flex items-center justify-between">
+      <div className={` ${isBlueBgRoute ? 'hidden' : 'h-2 xl:h-6 xl:w-[100%]  z-10  bg-black xl:blur-[18px]  blur-[30px]'}`}></div>
+      <div className="flex px-3 xl:px-16 items-center justify-between">
         <div className='text-white'>
           <ul className='hidden md:flex gap-5 items-center'>
             <li><Link href="/mission">Mission</Link></li>
@@ -35,18 +33,19 @@ const Navbar: React.FC = () => {
             <li><Link href="/help">Help</Link></li>
           </ul>
         </div>
-        <div className='w-40 md:w-auto'>
-          <Image src="/Logo.svg" width={250} height={150} alt='logo' />
-        </div>
+        <div className="flex items-center my-3 md:my-0">
+            <Image src="/Logo.svg" alt="logo" width={300} height={100} className="w-28 xl:w-[273px] h-[90px]"  />
+            <h1 className="-rotate-90 relative top-2 md:top-4 right-2 text-sm md:text-xl " >.au</h1>
+          </div>
         <div className='flex gap-5 items-start'>
-          <button className='flex items-center justify-center md:gap-3 text-white md:rounded-full rounded-3xl border-white border-2 md:w-32 w-20 md:h-16 md:text-xl px-3' onClick={openLogin}>
+          <button className='flex items-center justify-center md:gap-3 text-white md:rounded-full rounded-3xl border-white border-2 xl:w-32 w-20 md:h-16 md:text-xl px-3' onClick={openLogin}>
             Login
             <RiArrowDropDownLine className="text-5xl" />
           </button>
           <Image src="/Aus.svg" width={40} height={50} alt='lang' />
         </div>
       </div>
-      <Login isOpen={isLoginOpen} onClose={closeLogin}  />
+      <Login isOpen={isLoginOpen} onClose={closeLogin}   />
     </div>
   );
 }

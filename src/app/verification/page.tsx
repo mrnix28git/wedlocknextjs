@@ -1,22 +1,28 @@
 "use client";
-
-import React from "react";
+import React, { useState } from "react";
 import Input from "../../Components/Input";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const Verification = () => {
-const router = useRouter();
+  const router = useRouter();
+  const [verificationCode, setVerificationCode] = useState(["", "", "", ""]);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleChange = (index: number, event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    const newVerificationCode = [...verificationCode];
+    newVerificationCode[index] = value;
+    setVerificationCode(newVerificationCode);
+  };
+
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
- 
     router.push("/createpassword");
   };
 
   return (
     <div className="min-w-screen min-h-screen flex flex-col items-center justify-top  bg-[#007EAF] ">
-      <div className="flex items-center justify-center mb-14 " >
+      <div className="flex items-center justify-center mb-14 ">
         <Image src="/logowhite.png" alt="" width={268} height={90} />
       </div>
       <div className="flex flex-col items-center justify-center mt-8 mb-2">
@@ -33,41 +39,29 @@ const router = useRouter();
         </div>
         <div className="flex items-center justify-center mt-8">
           <form action=" " onSubmit={handleSubmit}>
-            <div className="flex  gap-4">
-              <Input
-                className="w-16 h-16 text-center rounded-xl text-3xl text-[#007EAF] placeholder-[#007EAF] outline-gray-400"
-                label=""
-                type="text"
-                placeholder="0"
-              />
-              <Input
-                className="w-16 h-16 text-center rounded-xl text-3xl text-[#F9F5FF] placeholder-[#007EAF] outline-gray-400"
-                label=""
-                type="text"
-                placeholder="0"
-              />
-              <Input
-                className="w-16 h-16 text-center rounded-xl text-3xl text-[#F9F5FF] placeholder-[#007EAF] outline-gray-400"
-                label=""
-                type="text"
-                placeholder="0"
-              />
-              <Input
-                className="w-16 h-16 text-center rounded-xl text-3xl text-[#F9F5FF] placeholder-[#007EAF] outline-gray-400"
-                label=""
-                type="text"
-                placeholder="0"
-              />
+            <div className="flex gap-4">
+              {[0, 1, 2, 3].map((index) => (
+               <Input
+               key={index}
+               label=""
+               value={verificationCode[index]}
+               onChange={(value) => handleChange(index, value)}
+               className="w-16 h-16 text-center rounded-xl text-3xl text-[#007EAF] placeholder-[#007EAF] outline-gray-400"
+               type="text"
+               inputMode="numeric"
+               maxLength={1}
+               placeholder="0"
+            
+             />
+              ))}
             </div>
             <div className="flex items-center justify-center mt-8 text-[#F9F5FF] gap-1 text-lg">
-                <p>Did you not receive code? </p>
-                <button> Click to resend.</button>
-
+              <p>Did you not receive code? </p>
+              <button> Click to resend.</button>
             </div>
-              <button className="bg-white text-[#007EAF] w-full h-12 rounded-xl" >
-                Confirm
-              </button>
-
+            <button className="bg-white text-[#007EAF] w-full h-12 rounded-xl">
+              Confirm
+            </button>
           </form>
         </div>
       </div>

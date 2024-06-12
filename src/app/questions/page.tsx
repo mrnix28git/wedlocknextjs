@@ -178,7 +178,10 @@ const MultiStepForm: React.FC = () => {
     e.preventDefault();
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
+    }else{
+      router.push("/register");
     }
+
   };
 
   const renderOptions = (question: any) => {
@@ -188,22 +191,22 @@ const MultiStepForm: React.FC = () => {
           <div
             className={`grid ${
               question.options && question.options1
-                ? " grid-cols-1 md:grid-cols-3 gap-3 pl-4 pr-4"
-                : "w-[30%] grid-cols-1 gap-2"
+                ? " grid-cols-1  xl:w-auto md:grid-cols-3 gap-3 pl-4 pr-4"
+                : "w-[30%]  grid-cols-1 gap-2"
             } ${
               question.options && question.options.length > 5
-              ? "grid-cols-1 w-[70%] md:grid-cols-5 gap-4 pl-4 pr-4"
-              : "mt-4 grid-cols-1 gap-2"
+              ? "grid-cols-1 w-full md:w-auto md:grid-cols-5 gap-4 pl-4 pr-4"
+              : "mt-4 grid-cols-1 gap-2 w-full md:w-[50%] px-2 text-sm"
             } mb-2 mt-4`}
           >
             {question.options.map((option: string, index: number) => (
               <div
-                className="flex   items-center justify-between rounded-xl h-10 px-5 text-white bg-[#FFFFFF80] "
+                className="flex  items-center justify-between rounded-xl h-10 px-5 text-white bg-[#FFFFFF80] "
                 key={index}
               >
                 <label
                   htmlFor={`option-${index}`}
-                  className="ml-3 block font-medium"
+                  className="ml-3 block font-medium "
                 >
                   {option}
                 </label>
@@ -229,8 +232,8 @@ const MultiStepForm: React.FC = () => {
               <div
                 className={`grid ${
                   question.options1.length > 2
-                    ? "grid-cols-1 md:grid-cols-3 gap-4 pl-4 pr-4"
-                    : "grid-cols-1"
+                    ? "grid-cols-1 w-full md:w-auto md:grid-cols-3 gap-4 pl-4 pr-4 "
+                    : "grid-cols-1 "
                 } mb-4`}
               >
                 {question.options1.map((option: string, index: number) => (
@@ -240,7 +243,7 @@ const MultiStepForm: React.FC = () => {
                   >
                     <label
                       htmlFor={`option1-${index}`}
-                      className="ml-3 block font-medium"
+                      className="ml-3 block font-medium "
                     >
                       {option}
                     </label>
@@ -266,13 +269,13 @@ const MultiStepForm: React.FC = () => {
     } else if (question.type === "Dropdown") {
       return (
         <>
-        <div className=" flex items-center justify-center mt-10 w-[40%] ">
+        <div className=" flex items-center justify-center mt-10 xl:w-[40%] w-full px-2 xl:px-0 ">
           {question.options && (
             <select
               name={`question-${currentQuestion}-1`}
               value={selectedOption[`question-${currentQuestion}-1`] || ""}
               onChange={handleOptionChange}
-              className="w-full h-10 px-5 text-white  bg-[#7DB9D1]
+              className="w-full h-10 xl:px-5 text-white  bg-[#7DB9D1]
               ]
               rounded-md"
             >
@@ -291,7 +294,7 @@ const MultiStepForm: React.FC = () => {
                 name={`question-${currentQuestion}-2`}
                 value={selectedOption[`question-${currentQuestion}-2`] || ""}
                 onChange={handleOptionChange}
-                className="w-full h-10 px-5 text-white bg-[#7DB9D1] rounded-md mt-2"
+                className="w-full h-10 px-0 xl:px-5 text-white bg-[#7DB9D1] rounded-md mt-2"
               >
                 <option value="">Select an option</option>
                 {question.options1.map((option: string, index: number) => (
@@ -318,7 +321,7 @@ const MultiStepForm: React.FC = () => {
             className="w-72 h-24 mx-auto  mb-2 "
           />
           
-        <div className=" w-[50vw] mt-10 text-center pl-4 pr-4">
+        <div className=" xl:w-[50vw] w-full mt-10 text-center pl-4 pr-4">
           <h2 className="text-2xl font-bold">
             Question {currentQuestion + 1}/{questions.length}
           </h2>
@@ -330,7 +333,7 @@ const MultiStepForm: React.FC = () => {
               }}
             ></div>
           </div>
-          <p className="my-4 text-4xl font-semibold">
+          <p className="my-4 text-2xl md:text-4xl font-semibold">
             {questions[currentQuestion].text ||
               questions[currentQuestion].text2}
           </p>
@@ -342,11 +345,11 @@ const MultiStepForm: React.FC = () => {
     
         <form className="flex  flex-col items-center justify-center gap-2   space-y-4" onSubmit={handleSubmit}>
           {renderOptions(questions[currentQuestion])}
-          <div className="flex gap-4  justify-between mt-6 relative left-[40%] ">
+          <div className="flex gap-4  justify-between  xl:mt-6 relative xl:left-[40%] ">
             {questions[currentQuestion].skip && (
               <button
                 type="button"
-                className="px-4 mt-20 py-2 text-white bg-[#007EAF] border  rounded-md"
+                className="px-4 xl:mt-20 py-2 text-white bg-[#007EAF] border rounded-md h-[48px]"
                 onClick={handleSkip}
               >
                 Skip the question
@@ -354,8 +357,8 @@ const MultiStepForm: React.FC = () => {
             )}
             <button
               type="submit"
-              className=" px-4 mt-20 py-2 text-[#007EAF] bg-white rounded-md flex items-center gap-2"
-            >
+              className="px-4 mb-4 xl:mb-0 xl:mt-20 py-2 text-[#007EAF] bg-white rounded-md flex items-center gap-2 h-[48px]"
+              >
               Continue <FaArrowRightLong />
 
             </button>

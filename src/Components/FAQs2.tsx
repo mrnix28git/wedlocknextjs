@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import '../app/font.css';
+
 
 type FAQ = {
   question: string;

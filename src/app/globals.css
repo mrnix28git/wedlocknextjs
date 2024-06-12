@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.font-lato{
-  font-family: "Lato", sans-serif;
-}
+@import url('/font.css');
+
+
+
+
 
 body{
-  font-family: "Lato", sans-serif; 
+ font-family: 'Proxima-Nova-Semibold',sans-serif ;
 }
 
-.bg-dark-blue {
-  background-color: #1a202c; /* Tailwind's gray-900 */
-}
+/* .bg-dark-blue {
+  background-color: #1a202c;
+} */
 
-.bg-light-blue {
-  background-color: #3b82f6; /* Tailwind's blue-500 */
-}
+/* .bg-light-blue {
+  background-color: #3b82f6; 
+} */

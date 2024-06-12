@@ -12,8 +12,10 @@ const Login: React.FC<LoginProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-<div className="flex items-center justify-center ">
-<div className=" bg-gradient-to-r from-[#000000] to-[#504f4f]  p-8 rounded-lg absolute top-16 xl:top-28 md:right-20 xl:w-[50%]">
+<div className="flex items-center justify-center   ">
+<div className="backdrop-blur-xl
+
+  p-8 rounded-lg absolute top-16 xl:top-32 md:right-20 xl:w-[50%] ">
         <button onClick={onClose} className="absolute top-2 right-2 text-2xl text-black bg-white rounded-sm w-10">&times;</button>
         <form className="grid grid-cols-1 xl:grid-cols-5 gap-4 mt-5">
           <div className="mb-4 md:col-span-2">
