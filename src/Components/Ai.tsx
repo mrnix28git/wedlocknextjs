@@ -7,7 +7,7 @@ const Ai = () => {
       <img
         src="/curvewhite.svg"
         alt="arw"
-        className="absolute  w-[35rem] right-0 -top-20"
+        className="absolute  w-[40rem] rotate-12 -right-10 -top-32"
       />
       <div className="bg-[#009BDA] md:space-y-40 md:px-20 md:pt-20 p-10  ">
         <div className="relative text-white space-y-10">
@@ -35,6 +35,16 @@ const Ai = () => {
                 className="relative md:left-40 left-20 md:-top-10 -top-5 w-52  md:w-auto "
               />
             </div>
+            <div className="absolute md:top-20 -top-10  -right-32 w-16 md:w-auto">
+              <Image
+                src="/recomended.png"
+                alt=""
+                width={400}
+                height={300}
+                className=""
+              />
+            </div>
+           
           </div>
         </div>
       </div>

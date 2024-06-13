@@ -3,6 +3,7 @@ import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
 import Image from "next/image";
 import Link from "next/link";
+import '../app/globals.css'
 
 function Hero() {
   const imagePaths = [
@@ -31,30 +32,38 @@ function Hero() {
     "/img23.png",
     "/img24.png",
     "/img25.png",
-    
+    "/img11.png",
+    "/img12.png",
+    "/img13.png",
+    "/img21.png",
+    "/img22.png",
+    "/img23.png",
+    "/img24.png",
     
 
+    
   ];
 
   return (
-    <div className="relative   md:h-[48rem] overflow-hidden">
-      <div className="absolute  inset-0   " >
-        <div className="grid grid-cols-5 grid-rows-5 gap-1  rotate-12 bg-black h-full scale-[1.35]">
+    <div className="relative xl:h-[48rem] h-[100vh] overflow-hidden">
+       <div className="absolute  inset-0 bg-black   " >
+        <div className="grid grid-cols-7 grid-rows-6 gap-2 rotate-12 h-[72rem]  scale-[1.39]  ">
         {imagePaths.map((path, index) => (
-          <div key={index} className="relative  h-full w-full ">
-            <Image src={path} layout="fill" alt={`Image ${index + 1}`} />
-          </div>
+        <div key={index} className="relative  " >
+        <Image src={path} layout="fill" alt={`Image ${index + 1}`}  />
+      </div>
+      
         ))}
         </div>
       </div>
       <div className="relative bg-black  bg-opacity-60  text-white h-full md:pl-16 md:flex  md:pt-32 pt-16 px-10 gap-80">
-        <div className="  font-lato space-y-20">
-          <div className=" space-y-8 ">
-            <h1 className=" text-9xl font-bold w-[40rem]">
-              Love at first swipe
+        <div className="space-y-20 ">
+        <div className="flex flex-col justify-center gap-10 ml-10 mt-20">
+            <h1 className=" text-2xl md:text-4xl mt-10 md:mt-0 xl:text-8xl font-bold  " style={{ fontFamily: 'Proxima-Nova-Bold, sans-serif', letterSpacing: '2px' }}>
+              Love At <br /> First Swipe
             </h1>
-            <p className="text-2xl md:tracking-wider w-[35rem]">
-              Australia{`'`}s most trusted Matrimony Website and Mobile
+            <p className=" text-2xl "  style={{ fontFamily: 'Proxima-Nova-Thin, sans-serif', letterSpacing: '2px' }}>
+              Australia{`'`}s most trusted Matrimony <br /> Website and Mobile
               Application
             </p>
           </div>
@@ -119,10 +128,10 @@ function Hero() {
             </div>
           </div> */}
 
-          <Link href={"/questions"}  className="flex items-center justify-between bg-[#009BDA] rounded-full w-56 h-12 px-5 text-lg" >
-            <div className="flex items-center gap-2">
+          <Link href={"/questions"}  className="flex items-center justify-between bg-[#009BDA] rounded-full w-56 h-12 px-5 text-lg ml-10" >
+            <div className="flex items-center gap-6">
               <span>  Start free today </span>
-             <IoMdArrowForward /> 
+              <span className="text-2xl"> <IoMdArrowForward /></span>
             </div>
             
           </Link>
@@ -130,13 +139,18 @@ function Hero() {
         <div>
           <div
             className="relative
-           md:-bottom-96 left-64 "
+           md:-bottom-96 left-[20rem] "
           >
             {/* <div className="border-8 border-gray-700 rounded-3xl ">
               <div className="bg-white  bg-opacity-30 backdrop-blur-3xl w-72 h-[30rem] rounded-2xl "></div>
             </div> */}
-            <div className="">
-              <Image src="/ver.svg" width={60} height={40} alt="logo" />
+            <div className="flex flex-col items-right justify-right ">
+              {/* <Image src="/ver.svg" width={100} height={100} alt="logo" /> */}
+              <div className="flex flex-col items-center gap-4">
+                <Image src="/veri.png" width={50} height={50} alt="logo" />
+                <p className="text-center  text-[14px]" style={{ fontFamily: 'Proxima-Nova-Bold, sans-serif' }}>#1 matrimony <br /> website and mobile <br /> app</p>
+              </div>
+              <p className="text-[10px]  mt-10"  style={{ fontFamily: 'Proxima-Nova-Thin, sans-serif' }}>All photos are used for illustrative purposes only. </p>
             </div>
           </div>
         </div>
