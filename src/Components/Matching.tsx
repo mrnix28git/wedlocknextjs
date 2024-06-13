@@ -6,7 +6,12 @@ import { PiChatsBold } from "react-icons/pi";
 import { IoMdArrowForward } from "react-icons/io";
 const Matching = () => {
   return (
-    <div className="bg-[#DCD1E8] font-lato px-16 py-20 ">
+    <div className="bg-[#DCD1E8] font-lato px-16 py-20 relative">
+      <img
+        src="/curvesm.svg"
+        alt="arw"
+        className="absolute rotate-45  w-[35rem] -right-20 top-10"
+      />
       <div className="text-[#4E3A63] space-y-10 pb-10">
         <h1 className="text-6xl font-bold">Exclusive matchmaking</h1>
         <p className="">

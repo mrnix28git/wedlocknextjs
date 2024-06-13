@@ -4,7 +4,7 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const GetApp = () => {
   return (
-    <div className="bg-[#007EAF] text-white relative font-lato">
+    <div className="bg-[#007EAF] text-white relative font-lato overflow-hidden">
       <div className="bg-[url('/appbg.svg')] h-full w-full md:flex justify-between md:p-16 p-10">
         <div className="md:space-y-32 space-y-12">
           <div className="md:space-y-10 space-y-5">
