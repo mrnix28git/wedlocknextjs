@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   return (
     <div className={`absolute z-10   w-full text-white   ${isBlueBgRoute ? 'bg-[#007eb0]' : ''}`}>
       
-      <div className={` ${isBlueBgRoute ? 'hidden' : 'h-2 xl:h-6 xl:w-[100%]  z-10  bg-black xl:blur-[18px]  blur-[30px]'}`}></div>
+      <div className={` ${isBlueBgRoute ? 'hidden' : `h-2 xl:h-6 xl:w-[100%]  z-10  bg-black xl:blur-[18px]  blur-[30px]`}`}></div>
       <div className="flex px-3 xl:px-16 items-center justify-between">
         <div className='text-white'>
           <ul className='hidden md:flex gap-5 items-center'>

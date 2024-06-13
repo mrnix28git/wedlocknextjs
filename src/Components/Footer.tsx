@@ -5,6 +5,8 @@ import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io5";
 import { usePathname } from "next/navigation";
+import '../app/font.css';
+
 
 const Footer = () => {
   const pathname = usePathname();
@@ -76,7 +78,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="rounded-full bg-[#FFFFFF80] h-1 "></div>
+      <div className="flex items-center justify-between">
+      <div className="rounded-full bg-[#FFFFFF80] h-1 w-[95%] "></div> 
+       <button className="text-white  rounded-full bg-[#007EAF] w-12 h-12 flex items-center justify-center text-2xl" >
+          <Image src="/arrowup.png" alt="logo" width={20} height={50} />
+        </button>
+        </div>
       <div className="flex flex-col md:flex-row items-end justify-between">
         <div>
           <h1 className="font-semibold">
@@ -87,10 +94,8 @@ const Footer = () => {
             dating website.
           </p>
         </div>
-        <h1 className="mt-2 text-balance">© 2024 Wedlock Australia. All rights reserved.</h1>
-        <div className="text-white rounded-full bg-[#007EAF] w-10 h-10 flex items-center justify-center text-2xl">
-          ^
-        </div>
+        <h1 className="mt-2 text-balance text-[16px]  mx-20" style={{letterSpacing: '3%' , lineHeight:'22px'}} >© 2024 Wedlock Australia. All rights reserved.</h1>
+       
       </div>
     </div>
   );

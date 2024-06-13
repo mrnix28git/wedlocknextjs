@@ -35,6 +35,15 @@ const Ai = () => {
                 className="relative md:left-40 left-20 md:-top-10 -top-5 w-52  md:w-auto "
               />
             </div>
+            <div className="absolute md:top-20 -top-10  -right-32 w-16 md:w-auto">
+              <Image
+                src="/recomended.png"
+                alt=""
+                width={400}
+                height={300}
+                className=""
+              />
+            </div>
            
           </div>
         </div>

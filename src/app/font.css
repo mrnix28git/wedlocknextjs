@@ -42,3 +42,8 @@
     font-family: 'Proxima-Nova-Light-Italic';
     src: url('../../public/proxima-nova-2/Proxima-Nova-Light-Italic.otf') format('opentype');
   }
+
+  @font-face {
+    font-family: 'Proxima-Nova-ExtraBold';
+    src: url('../../public/proxima-nova-2/Proxima-Nova-ExtraBold.otf') format('opentype');
+  }

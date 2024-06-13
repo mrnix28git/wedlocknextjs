@@ -8,14 +8,14 @@ const Feature = () => {
         <img
           src="/curvewhite.svg"
           alt="arw"
-          className="absolute  w-[35rem] left-10 top-0 -rotate-[128deg]"
+          className="absolute  w-[42rem] left-10 -top-10 -rotate-[128deg]"
         />
         <div className='bg-[#007EAF] flex flex-col md:flex-row justify-between text-white md:p-24 p-8  '>
       <div className='space-y-12 '>
         
-          <h1 className='text-5xl font-bold' style={{letterSpacing:'4px'}}>Connect with matches <br /> the way you like
+          <h1 className='text-[64px] ' style={{fontFamily:'Proxima-Nova-Bold, sans-serif', lineHeight:'89.6px'}}>Connect with matches <br /> the way you like
           </h1>
-          <p className='text-xl'style={{fontFamily:'Proxima-Nova-Regular, sans-serif', letterSpacing:'4px'}}>Cras at pellentesque eros. Nullam vitae <br />sapien et felis eleifend luctus. Nam ac dui</p>
+          <p className='text-[28px] 'style={{fontFamily:'Proxima-Nova-Regular, sans-serif',lineHeight:'42px', letterSpacing:'2%'}}>Cras at pellentesque eros. Nullam vitae <br />sapien et felis eleifend luctus. Nam ac dui</p>
           <div className="">
           <div className="flex flex-col px-8 py-7 mt-9 rounded-3xl backdrop-blur-[4.6px] bg-white bg-opacity-80 md:w-1/2 lg:w-11/12 w-full max-w-lg mr-0 md:mr-20">
           <div className="flex gap-5 max-md:flex-wrap">
@@ -25,10 +25,10 @@ const Feature = () => {
             className="shrink-0 self-start w-10 aspect-square"
           />
           <div className="flex flex-col max-md:max-w-full">
-            <div className="text-2xl font-bold leading-7 text-gray-900 text-opacity-90 max-md:max-w-full">
+            <div className="text-[28px] text-gray-900 text-opacity-90 max-md:max-w-full"  style={{fontFamily:'Proxima-Nova-Bold, sans-serif',lineHeight:'28px'}}>
               Video call
             </div>
-            <div className="mt-1 text-xl leading-7 text-slate-600 max-md:max-w-full" style={{fontFamily:'Proxima-Nova-Regular, sans-serif'}}>
+            <div className="mt-1 text-[20px] leading-7 text-slate-600 max-md:max-w-full" style={{fontFamily:'Proxima-Nova-Regular, sans-serif',lineHeight:'28px'}}>
               Etiam sed vulputate nisl, eu elementum arcu. Vivamus dignissim
               tortor in tellus dictum pellentesque.{" "}
             </div>
@@ -42,10 +42,10 @@ const Feature = () => {
             className="shrink-0 self-start w-10 aspect-square"
           />
           <div className="flex flex-col max-md:max-w-full">
-            <div className="text-2xl font-bold leading-7 text-gray-900 text-opacity-90 max-md:max-w-full">
+            <div className="text-[28px] text-gray-900 text-opacity-90 max-md:max-w-full" style={{fontFamily:'Proxima-Nova-Bold, sans-serif',lineHeight:'28px'}} >
               Message
             </div>
-            <div style={{fontFamily:'Proxima-Nova-Regular, sans-serif'}} className="mt-1 text-xl leading-7 text-slate-600 max-md:max-w-full" >
+            <div style={{fontFamily:'Proxima-Nova-Regular, sans-serif',lineHeight:'28px'}} className="mt-1 text-xl leading-7 text-slate-600 max-md:max-w-full" >
               Vivamus dignissim tortor in tellus dictum pellentesque. Praesent
               mauris metus, dictum quis velit non.
             </div>
@@ -56,13 +56,13 @@ const Feature = () => {
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/2516ce631cb5181b80f63a907eccf12e43d1b433cebdf14cb499c929d7ef455c?apiKey=8d68765060a54e4683a73062068958aa&"
-            className="shrink-0 self-start w-10 aspect-square"
+            className="shrink-0 self-start w-10 aspect-square "
           />
           <div className="flex flex-col max-md:max-w-full">
-            <div className="text-2xl font-bold leading-7 text-gray-900 text-opacity-90 max-md:max-w-full">
+            <div className="text-[24px] text-gray-900 text-opacity-90 max-md:max-w-full" style={{fontFamily:'Proxima-Nova-Bold, sans-serif',lineHeight:'28px'}}>
               Voice call
             </div>
-            <div style={{fontFamily:'Proxima-Nova-Regular, sans-serif'}} className="mt-1 text-xl leading-7 text-slate-600 max-md:max-w-full">
+            <div style={{fontFamily:'Proxima-Nova-Regular, sans-serif',lineHeight:'28px'}} className="mt-1 text-xl leading-7 text-slate-600 max-md:max-w-full">
               Vivamus dignissim tortor in tellus dictum pellentesque. Praesent
               mauris metus, dictum quis velit non.
             </div>
@@ -73,10 +73,8 @@ const Feature = () => {
           
       </div>
      
-      
-
-      <div className=''>
-          <Image src="/main.svg" alt="main" width={400} height={100} />
+      <div className=' flex flex-col md:flex-row justify-between text-white'>
+          <Image src="/main.svg" alt="main" width={400} height={310} className='w-full h-[54rem]'  />
       </div>
   </div>
   </div>

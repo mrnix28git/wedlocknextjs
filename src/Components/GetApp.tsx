@@ -8,11 +8,11 @@ const GetApp = () => {
   return (
     <div className="bg-[#007EAF] text-white relative overflow-hidden ">
       <div className=" flex justify-between ">
-      <div className="bg-container md:flex justify-between w-full md:p-12 p-10">
+      <div className="bg-container md:flex justify-between w-full px-16 py-12">
         
         <div className="md:space-y-32 space-y-12 ml-20">
           <div className="md:space-y-10 space-y-5 mt-4">
-            <h1 className="text-6xl font-bold">Get the app!</h1>
+            <h1 className="text-[64px] "style={{ fontFamily: 'Proxima-Nova-Bold, sans-serif' }}>Get the app!</h1>
             <p className="text-xl text-balance" style={{ fontFamily: 'Proxima-Nova-Regular, sans-serif', lineHeight: '42px' , letterSpacing:'2px'}} >
               Lorem ipsum dolor sit amet consectetur. <br /> Dui mauris dictum ultrices rutrum nec arcu <br />vel. Viverra egestas vitae aenean placerat <br />faucibus pharetra.
             </p>
@@ -38,7 +38,7 @@ const GetApp = () => {
             </button>
           </div>
         </div>
-        <div className="mt-10 md:mt-0 relative mr-20">
+        <div className="mt-8 md:mt-0 relative mr-20">
           <Image src="/qr.svg" width={200} height={150} alt="QR code" className="absolute w-[280px] xl:right-64 xl:top-32 bottom-44" />
           <Image src="/ph.svg" width={300} height={200} alt="Phone" className="" />
         </div>
