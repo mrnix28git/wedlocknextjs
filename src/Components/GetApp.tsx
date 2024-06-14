@@ -1,54 +1,53 @@
 import React from "react";
 import Image from "next/image";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
-import './getapp.css'
+import './getapp.css';
 import '../app/font.css';
 
 const GetApp = () => {
   return (
-    <div className="bg-[#007EAF] text-white relative overflow-hidden ">
-      <div className=" flex justify-between ">
-      <div className="bg-container md:flex justify-between w-full px-16 py-12">
-        
-        <div className="md:space-y-32 space-y-12 ml-20">
-          <div className="md:space-y-10 space-y-5 mt-4">
-            <h1 className="text-[64px] "style={{ fontFamily: 'Proxima-Nova-Bold, sans-serif' }}>Get the app!</h1>
-            <p className="text-xl text-balance" style={{ fontFamily: 'Proxima-Nova-Regular, sans-serif', lineHeight: '42px' , letterSpacing:'2px'}} >
-              Lorem ipsum dolor sit amet consectetur. <br /> Dui mauris dictum ultrices rutrum nec arcu <br />vel. Viverra egestas vitae aenean placerat <br />faucibus pharetra.
-            </p>
+    <div className="bg-[#007EAF] text-white relative overflow-hidden">
+      <div className="flex flex-col lg:flex-row justify-between lg:justify-between flex-wrap">
+        <div className="bg-container flex flex-col lg:flex-row justify-between w-full px-6 md:px-16 py-8 md:py-12">
+          <div className="flex flex-col space-y-12 lg:space-y-32 ml-4 md:ml-20 w-full lg:w-1/2">
+            <div className="space-y-5 mt-4 lg:space-y-10">
+              <h1 className="text-4xl sm:text-5xl md:text-[64px]" style={{ fontFamily: 'Proxima-Nova-Bold, sans-serif' }}>Get the app!</h1>
+              <p className="text-lg sm:text-xl" style={{ fontFamily: 'Proxima-Nova-Regular, sans-serif', lineHeight: '32px sm:40px lg:42px', letterSpacing: '1px sm:1.5px lg:2px' }}>
+                Lorem ipsum dolor sit amet consectetur. <br /> Dui mauris dictum ultrices rutrum nec arcu <br />vel. Viverra egestas vitae aenean placerat <br />faucibus pharetra.
+              </p>
+            </div>
+            <div className="flex flex-row    lg:space-x-5 space-y-1  sm:space-y-0" >
+              <button className="rounded-2xl bg-[#FFFFFF] border-2 border-[#0000004D] text-black text-lg p-2 cursor-pointer px-5">
+                <div className="flex items-center gap-2">
+                  <FaApple className="text-3xl sm:text-4xl md:text-5xl" />
+                  <div className="text-start">
+                    <p className="text-[#231F20B2] text-sm" style={{ fontFamily: 'Proxima-Nova-Thin, sans-serif' }}>Download from</p>
+                    <p className="text-lg font-medium">Apple Store</p>
+                  </div>
+                </div>
+              </button> 
+              <button className="rounded-2xl bg-[#FFFFFF] border-2 border-[#0000004D] text-black text-lg  px-5">
+                <div className="flex items-center gap-2">
+                  <FaGooglePlay className="text-3xl sm:text-4xl md:text-5xl text-[#231F20E5]" />
+                  <div className="text-start">
+                    <p className="text-[#231F20B2] text-sm" style={{ fontFamily: 'Proxima-Nova-Thin, sans-serif' }}>Download from</p>
+                    <p className="text-lg font-medium">Google Store</p>
+                  </div>
+                </div>
+              </button>
+            </div>
           </div>
-          <div className="md:space-x-5 ">
-            <button className="rounded-2xl bg-[#FFFFFF] border-2 border-[#0000004D] text-black text-lg p-2 cursor-pointer px-5">
-              <div className="flex items-center gap-2">
-                <FaApple className="text-5xl" />
-                <div className="text-start">
-                  <p className="text-[#231F20B2] text-sm" style={{ fontFamily: 'Proxima-Nova-Thin, sans-serif' }}>Download from</p>
-                  <p className="text-lg font-medium">Apple Store</p>
-                </div>
-              </div>
-            </button>
-            <button className="rounded-2xl bg-[#FFFFFF] border-2 border-[#0000004D] text-black text-lg p-2 px-5">
-              <div className="flex items-center gap-2">
-                <FaGooglePlay className="text-5xl text-[#231F20E5]" />
-                <div className="text-start">
-                  <p className="text-[#231F20B2] text-sm" style={{ fontFamily: 'Proxima-Nova-Thin, sans-serif' }}>Download from</p>
-                  <p className="text-lg font-medium">Google Store</p>
-                </div>
-              </div>
-            </button>
+          <div className="mt-8 lg:mt-0 relative flex justify-center lg:justify-end w-full lg:w-1/2">
+            <div className="relative">
+              <Image src="/qr.svg" width={200} height={150} alt="QR code" className="absolute w-[150px] sm:w-[200px] lg:w-[280px] right-22 md:right-24 lg:right-64 bottom-20 md:bottom-32 lg:bottom-44" />
+              <Image src="/ph.svg" width={300} height={200} alt="Phone" className="w-3/4 sm:w-1/2 md:w-2/3 lg:w-auto mx-auto" />
+            </div>
           </div>
         </div>
-        <div className="mt-8 md:mt-0 relative mr-20">
-          <Image src="/qr.svg" width={200} height={150} alt="QR code" className="absolute w-[280px] xl:right-64 xl:top-32 bottom-44" />
-          <Image src="/ph.svg" width={300} height={200} alt="Phone" className="" />
-        </div>
       </div>
-
-      <div className="absolute top-0 right-0 bg-[url('/topcircle.png')] bg-cover bg-center h-[400px] w-80 ">
-      {/* <Image src="/topcircle.png" alt=""  width={500} height={500}/> */}
+      <div className="absolute hidden lg:block top-0 right-0 bg-[url('/topcircle.png')] bg-cover bg-center h-[150px] sm:h-[200px] md:h-[300px] lg:h-[400px] w-20 sm:w-40 md:w-60 lg:w-80">
+        {/* <Image src="/topcircle.png" alt=""  width={500} height={500}/> */}
       </div>
-      </div>
-
     </div>
   );
 };

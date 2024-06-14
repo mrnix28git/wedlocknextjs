@@ -62,13 +62,15 @@ const Search = () => {
     <div>
       {" "}
       <div
-        className="md:space-y-16 relative  md:px-20 md:py-10  p-8 
+        className="md:space-y-10 relative min-h-screen  md:px-20 md:py-10  p-8 
     bg-[#E6F2F7]"
       >
-          <img
+          <Image
         src="/curvesm.svg"
         alt="arw"
-        className="absolute  w-[52rem] -right-60 top-2 z-10"
+        width={665}
+        height={665}
+        className="absolute  w-[48rem] -right-60 top-2 z-10"
       />
         
         <div className="md:space-y-10 space-y-5">
@@ -82,7 +84,7 @@ const Search = () => {
             groundbreaking overhaul of the eharmony you know and trust.
           </p>
         </div>
-        <div className="md:flex gap-20">
+        <div className="md:flex justify-left gap-10 items-center ">
           <div className="rounded-full cursor-pointer hover:bg-[#009BDA] hover:text-white text-[#838E9E] p-4 text-[24px]" style={{fontFamily:'Proxima-Nova-SemiBold, sans-serif',lineHeight:'36px', letterSpacing:'3%'}}>
             Mother Tongue
           </div>
@@ -96,7 +98,8 @@ const Search = () => {
             Nationality
           </div>
         </div>
-        <div className="grid md:grid-cols-6 grid-cols-3 gap-3">
+        <div className="flex flex-col items-left gap-10">     
+             <div className="grid md:grid-cols-6 grid-cols-3 gap-3">
             {Profile.map((P, index) =>
         (
             <div key={index} className="flex flex-col items-center gap-2">
@@ -112,11 +115,13 @@ const Search = () => {
         ))}
          
         </div>
-        <div className="underline  flex items-center text-[28px] text-[#009BDA] relative left-[72rem]" style={{fontFamily:'Proxima-Nova-SemiBold, sans-serif',lineHeight:'42px'}}>
+        <div className="underline  flex justify-end text-[28px] text-[#009BDA] relative " style={{fontFamily:'Proxima-Nova-SemiBold, sans-serif',lineHeight:'42px'}}>
           <span>More Matrimonial</span>
           <span>{">"}</span>
         </div>
       </div>
+      </div>
+
     </div>
   );
 };
