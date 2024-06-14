@@ -6,18 +6,6 @@ import '../app/font.css';
 
 const GetApp = () => {
   return (
-<<<<<<< HEAD
-    <div className="bg-[#007EAF] text-white relative font-lato overflow-hidden">
-      <div className="bg-[url('/appbg.svg')] h-full w-full md:flex justify-between md:p-16 p-10">
-        <div className="md:space-y-32 space-y-12">
-          <div className="md:space-y-10 space-y-5">
-          <h1 className="text-6xl font-bold">Get the app!</h1>
-          <p className="text-2xl md:w-[40rem]">
-            Lorem ipsum dolor sit amet consectetur. Dui mauris dictum ultrices
-            rutrum nec arcu vel. Viverra egestas vitae aenean placerat faucibus
-            pharetra .
-          </p>
-=======
     <div className="bg-[#007EAF] text-white relative overflow-hidden ">
       <div className=" flex justify-between ">
       <div className="bg-container md:flex justify-between w-full px-16 py-12">
@@ -28,7 +16,6 @@ const GetApp = () => {
             <p className="text-xl text-balance" style={{ fontFamily: 'Proxima-Nova-Regular, sans-serif', lineHeight: '42px' , letterSpacing:'2px'}} >
               Lorem ipsum dolor sit amet consectetur. <br /> Dui mauris dictum ultrices rutrum nec arcu <br />vel. Viverra egestas vitae aenean placerat <br />faucibus pharetra.
             </p>
->>>>>>> 093fd45503118bee5161e71333a972e4d2c4c5da
           </div>
           <div className="md:space-x-5 ">
             <button className="rounded-2xl bg-[#FFFFFF] border-2 border-[#0000004D] text-black text-lg p-2 cursor-pointer px-5">

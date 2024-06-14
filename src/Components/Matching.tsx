@@ -7,17 +7,6 @@ import { IoMdArrowForward } from "react-icons/io";
 import '../app/font.css';
 const Matching = () => {
   return (
-<<<<<<< HEAD
-    <div className="bg-[#DCD1E8] font-lato px-16 py-20 relative">
-      <img
-        src="/curvesm.svg"
-        alt="arw"
-        className="absolute rotate-45  w-[35rem] -right-20 top-10"
-      />
-      <div className="text-[#4E3A63] space-y-10 pb-10">
-        <h1 className="text-6xl font-bold">Exclusive matchmaking</h1>
-        <p className="">
-=======
     <div className="bg-[#DCD1E8] px-20  py-12 relative  ">
       <div className="bg-[url('/shadow.png')] -rotate-342 absolute w-[80rem] h-[100%]  top-0 right-0 "></div>
       <Image
@@ -33,7 +22,6 @@ const Matching = () => {
       <div className="text-[#4E3A63] py-10 pb-10 px-14   ">
         <h1 className="text-lg md:text-2xl xl:text-6xl font-bold" style={{ fontFamily: 'Proxima-Nova-Bold, sans-serif', lineHeight: '89.5px' }}>Exclusive matchmaking</h1>
         <p className=" md:text-[28px] " style={{ fontFamily: 'Proxima-Nova-Regular, sans-serif', letterSpacing: '2px' ,lineHeight: '42px',opacity: '0.8' }}>
->>>>>>> 093fd45503118bee5161e71333a972e4d2c4c5da
           Cras at pellentesque eros. Nullam vitae sapienet felis eleifend
           luctus. Nam ac dui
         </p>
